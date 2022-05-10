@@ -41,3 +41,17 @@ Un essai de librairie CSS
     <div class="bouton">
         <a>Bouton</a>
     </div>
+## Couleurs
+    color: var(--blue1);
+* --blue1
+* --blue2
+* --green1
+* --green2
+* --red1
+* --red2
+* --black1
+## Backgrounds
+    background: var(--bgBlack);
+* --bgBlack
+* --bgWhite
+* --bgBlue
