@@ -1,22 +1,43 @@
 # FrameBok
 Un essai de librairie CSS 
 # CDN
-`<link rel="stylesheet" href="https://yannickbiheul.com/framebok/framebok_mini.css">`
+    <link rel="stylesheet" href="https://yannickbiheul.com/framebok/framebok_mini.css">
 # Utilisation
 ## Grille
-`display: grid;
-grid-template-columns: repeat(12, 1fr);
-grid-template-rows: 80px auto 80px;
-min-height: 100vh;`
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px auto 80px;
+    min-height: 100vh;
 ## Menu de navigation
-`<nav></nav>`
+    <nav>
+        <ul class="nav-list">
+            <li>
+                <a href="">Menu</a>
+            </li>
+        </ul>
+    </nav>
 ## Contenu principal
-`<main></main>`
+    <main>
+        contenu
+    </main>
 ## Formulaire
-`<form></form>`
-Mettre les label et input dans une balise 
-`<div class="bloc-label-input"></div>`
+    <form>
+        <div class="bloc-label-input">
+            <label for="champ1">Champ 1</label>
+            <input type="text">
+        </div>
+        <div class="bloc-label-input">
+            <label for="champ2">Champ 2</label>
+            <input type="text">
+        </div>
+        <div class="bouton">
+            <button type="submit">Valider</button>
+        </div>
+    </form>
 ## Boutons
-Dans une div
-`<div class="boutons"></div>`
-Le bouton peut-être un button (<button>) ou un lien (<a>)
+    <div class="bouton">
+        <button>Bouton</button>
+    </div>
+    <div class="bouton">
+        <a>Bouton</a>
+    </div>

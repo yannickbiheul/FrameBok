@@ -269,11 +269,11 @@ main {
     font-family: sans-serif;
 }
 
-.bouton a:hover {
+.bouton a:hover, .bouton button:hover {
     padding: 15px;
 }
 
-.form {
+form {
     width: 100%;
 
     display: flex;
@@ -295,6 +295,7 @@ main {
     height: 30px;
     border-radius: 5px;
     padding: 2px;
+    width: 300px;
 }
 
 /* FOOTER */
