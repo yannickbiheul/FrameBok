@@ -10,7 +10,7 @@ grid-template-rows: 80px auto 80px;
 min-height: 100vh;`
 ## Menu de navigation
 `<nav></nav>`
-## Contenu proncipal
+## Contenu principal
 `<main></main>`
 ## Formulaire
 `<form></form>`
