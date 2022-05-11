@@ -8,7 +8,7 @@
     <!-- DESCRIPTION -->
     <meta name="description" content="" />
     <!-- CSS -->
-    <link rel="stylesheet" href="https://yannickbiheul.com/framebok//monCss_mini.css" />
+    <!-- <link rel="stylesheet" href="https://yannickbiheul.com/framebok//monCss_mini.css" /> -->
     <link rel="stylesheet" href="css/framebok.css">
     <!-- GOOGLE FONTS -->
     <!-- Roboto -->
@@ -25,37 +25,50 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 </head>
 
-<body>
-    <nav>
+<body class="bgWhite">
+    <nav class="nav-black">
         <ul class="nav-list">
             <li>
                 <a href="">Menu</a>
+            </li>
+            <li>
+                <a href="">Page 1</a>
+            </li>
+            <li>
+                <a href="">Page 2</a>
             </li>
         </ul>
     </nav>
 
     <main>
-        <h1>Titre</h1>
-        <div class="bouton">
-            <a href="">Bouton</a>
-        </div>
+        <h1>FrameBok</h1>
 
         <form>
             <div class="bloc-label-input">
-                <label for="champ1">Champ 1</label>
+                <label for="champ1">Input 1</label>
                 <input type="text">
             </div>
             <div class="bloc-label-input">
-                <label for="champ2">Champ 2</label>
+                <label for="champ2">Input2</label>
                 <input type="text">
+            </div>
+            <div class="bloc-label-input">
+                <label for="champ2">Textarea 1</label>
+                <textarea></textarea>
             </div>
             <div class="bouton">
                 <button type="submit">Valider</button>
             </div>
         </form>
+        <p class="valid">Un message de validation</p>
+        <p class="error">Un message d'erreur</p>
+
+        <div class="bouton">
+            <a href="">Bouton</a>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer-black">
         <a href="">Footer</a>
     </footer>
 

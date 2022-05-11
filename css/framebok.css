@@ -6,6 +6,11 @@
 
     font-family: "Quicksand", sans-serif;
     scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+html {
+    --res: calc(0.01 * 10vmin);
 }
 
 body {
@@ -13,6 +18,18 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 80px auto 80px;
     min-height: 100vh;
+}
+
+.bgWhite {
+    background: var(--bgWhite);
+}
+
+.bgBlack {
+    background: var(--bgBlack);
+}
+
+.bgBlue {
+    background: var(--bgBlue);
 }
 
 /* VARIABLES */
@@ -208,16 +225,26 @@ body {
     /* https://flatuicolors.com/palette/defo */
     --blue1: #2980b9;
     --blue2: #3498db;
+    --blue3: #227093;
+    --blue4: #34ace0;
     --green1: #27ae60;
     --green2: #2ecc71;
+    --green3: #218c74;
+    --green4: #33d9b2;
     --red1: #c0392b;
     --red2: #e74c3c;
+    --red3: #b33939;
+    --red4: #ff5252;
+    --orange1: #cd6133;
+    --orange2: #ff793f;
+    --purple1: #474787;
+    --purple2: #706fd3;
     --black1: #2c3e50;
 }
 
 /* NAVIGATION */
 
-nav {
+.nav-blue {
     grid-column: 1 / 13;
     grid-row: 1 / 2;
 
@@ -227,13 +254,25 @@ nav {
     background-color: var(--blue1);
 }
 
+.nav-black {
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black1);
+}
+
 .nav-list {
+    display: flex;
     list-style-type: none;
 }
 
 .nav-list a {
     text-decoration: none;
     color: #fff;
+    margin: 10px;
 }
 
 /* MAIN */
@@ -249,21 +288,52 @@ main {
 }
 
 .valid {
-    background-color: var(--green1);
+    background-color: var(--green3);
     color: #fff;
     padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000;
+    margin: 10px;
 }
 
 .error {
-    background-color: var(--red1);
+    background-color: var(--red3);
     color: #fff;
     padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000;
+    margin: 10px;
 }
+
+.flexRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: calc(64 * var(--res));
+}
+
+/* @media screen and (max-width: 1200px) {
+    h1 {
+        font-size: calc(25px + 3.3vw);
+    }
+} */
+
+/* BOUTONS */
 
 .bouton {
     margin: 10px;
     min-width: 200px;
-    height: 80px;
+    min-height: 80px;
 
     display: flex;
     justify-content: center;
@@ -271,27 +341,58 @@ main {
 }
 
 .bouton a, .bouton button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     text-decoration: none;
-    padding: 10px;
-    background-color: var(--blue1);
+    padding: 20px;
+    background-color: var(--blue3);
     color: #fff;
     border-radius: 5px;
     box-shadow: 2px 2px 4px #000;
-    border: none;
-    font-family: sans-serif;
+    border: 1px solid var(--blue1);
+    font-family: Roboto;
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
 }
 
-.bouton a:hover, .bouton button:hover {
-    padding: 15px;
+.bouton a::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    background: var(--blue1);
+    border-radius: 50% 50% 0 0;
+    transition: all .7s;
+    z-index: -1;
+}
+
+.bouton a:hover::before, .bouron button:hover::before {
+    top: 0;
+    border-radius: 0;
 }
 
 form {
-    width: 100%;
-
+    width: 60%;
+    border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000;
+    background-color: #fff;
+}
+
+form .bouton button {
+    width: 40vw;
 }
 
 .bloc-label-input {
@@ -300,18 +401,33 @@ form {
     justify-content: center;
     align-items: flex-start;
     margin: 10px;
+    width: 95%;
 }
 
 .bloc-label-input input {
     border: 1px solid #ccc;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
-    padding: 2px;
-    width: 300px;
+    padding: 10px;
+    width: 100%;
+}
+
+.bloc-label-input textarea {
+    border: 1px solid #ccc;
+    height: 80px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        width: 90%;
+    }
 }
 
 /* FOOTER */
-footer {
+.footer-blue {
     grid-column: 1 / 13;
     grid-row: 3 / 4;
 
@@ -320,6 +436,17 @@ footer {
     align-items: center;
 
     background-color: var(--blue1);
+}
+
+.footer-black {
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--black1);
 }
 
 footer a {

@@ -23,17 +23,24 @@ Un essai de librairie CSS
 ## Formulaire
     <form>
         <div class="bloc-label-input">
-            <label for="champ1">Champ 1</label>
+            <label for="champ1">Input 1</label>
             <input type="text">
         </div>
         <div class="bloc-label-input">
-            <label for="champ2">Champ 2</label>
+            <label for="champ2">Input2</label>
             <input type="text">
+        </div>
+        <div class="bloc-label-input">
+            <label for="champ2">Textarea 1</label>
+            <textarea></textarea>
         </div>
         <div class="bouton">
             <button type="submit">Valider</button>
         </div>
     </form>
+## Messages
+    <p class="valid">Un message de validation</p>
+    <p class="error">Un message d'erreur</p>
 ## Boutons
     <div class="bouton">
         <button>Bouton</button>
