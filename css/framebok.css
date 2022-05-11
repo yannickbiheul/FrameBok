@@ -248,6 +248,18 @@ main {
     align-items: center;
 }
 
+.valid {
+    background-color: var(--green1);
+    color: #fff;
+    padding: 10px;
+}
+
+.error {
+    background-color: var(--red1);
+    color: #fff;
+    padding: 10px;
+}
+
 .bouton {
     margin: 10px;
     min-width: 200px;
