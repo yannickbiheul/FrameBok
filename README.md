@@ -9,7 +9,7 @@ Un essai de librairie CSS
     grid-template-rows: 80px auto 80px;
     min-height: 100vh;
 ## Menu de navigation
-    <nav>
+    <nav class="nav-black>
         <ul class="nav-list">
             <li>
                 <a href="">Menu</a>
@@ -20,6 +20,10 @@ Un essai de librairie CSS
     <main>
         contenu
     </main>
+## Footer
+    <footer class="footer-black">
+        <a href="">Footer</a>
+    </footer>
 ## Formulaire
     <form>
         <div class="bloc-label-input">
