@@ -78,4 +78,5 @@ Le menu de navigation (nav) fait 80px de hauteur, le contenu (main) à une haute
     background: var(--bgBlack);
 * --bgBlack
 * --bgWhite
+* --bgWhite2
 * --bgBlue
