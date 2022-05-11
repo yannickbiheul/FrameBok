@@ -26,6 +26,7 @@ Le menu de navigation (nav) fait 80px de hauteur, le contenu (main) à une haute
     <footer class="footer-black">
         <a href="">Footer</a>
     </footer>
+3 couleurs: footer-black, footer-blue, footer-white
 ## Formulaire
     <form>
         <div class="bloc-label-input">
