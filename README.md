@@ -1,7 +1,7 @@
 # FrameBok
 Un essai de librairie CSS 
 # CDN
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/yannickbiheul/FrameBok/main/css/framebok_mini.css">
+    <link rel="stylesheet" href="https://yannickbiheul.com/framebok/framebok_mini.css">
 # Utilisation
 ## Grille
     display: grid;
