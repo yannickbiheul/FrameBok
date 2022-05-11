@@ -9,13 +9,14 @@ Un essai de librairie CSS
     grid-template-rows: 80px auto 80px;
     min-height: 100vh;
 ## Menu de navigation
-    <nav>
+    <nav class="nav-black">
         <ul class="nav-list">
             <li>
                 <a href="">Menu</a>
             </li>
         </ul>
     </nav>
+3 couleurs: nav-black, nav-blue, nav-white
 ## Contenu principal
     <main>
         contenu
