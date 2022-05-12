@@ -45,6 +45,16 @@ Le menu de navigation (nav) fait 80px de hauteur, le contenu (main) à une haute
             <button type="submit">Valider</button>
         </div>
     </form>
+## aside
+    <aside>
+        <ul>
+            <li>Élément 1</li>
+            <li>Élément 2</li>
+            <li>Élément 3</li>
+            <li>Élément 4</li>
+            <li>Élément 5</li>
+        </ul>
+    </aside>
 ## Messages
     <p class="valid">Un message de validation</p>
     <p class="error">Un message d'erreur</p>
