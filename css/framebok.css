@@ -1,353 +1,117 @@
-/* GENERAL */
+/* VARIABLES ET MIXINS*/
+/* PAGE */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: "Quicksand", sans-serif;
-    scroll-behavior: smooth;
-    text-decoration: none;
-}
-
-html {
-    --res: calc(0.01 * 10vmin);
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 80px auto 80px;
-    min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 80px auto 80px;
+      grid-template-rows: 80px auto 80px;
+  min-height: 100vh;
 }
 
-.dark {
-    background-color: var(--black2);
-    color: #ccc;
+body a {
+  text-decoration: none;
+  color: #fff;
 }
 
-/* VARIABLES */
-:root {
+.sombre {
+  background-color: #2d3436;
+  color: #ccc;
+}
 
-    /* https://flatuicolors.com/palette/defo */
-    --blue1: #2e86de;
-    --blue2: #54a0ff;
-    --blue3: #227093;
-    --blue4: #34ace0;
-    --green1: #27ae60;
-    --green2: #2ecc71;
-    --green3: #218c74;
-    --green4: #33d9b2;
-    --red1: #c0392b;
-    --red2: #e74c3c;
-    --red3: #b33939;
-    --red4: #ff5252;
-    --orange1: #cd6133;
-    --orange2: #ff793f;
-    --purple1: #474787;
-    --purple2: #706fd3;
-    --black1: #2c3e50;
-    --black2: #2d3436;
-    --black3: #2f3640;
+.sombre a {
+  color: #ccc;
+}
+
+.sombre nav {
+  background-color: #2d3436;
 }
 
 /* NAVIGATION */
-
-.nav-blue {
-    grid-column: 1 / 13;
-    grid-row: 1 / 2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--bgBlue);
+nav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #111;
 }
 
-.nav-black {
-    grid-column: 1 / 13;
-    grid-row: 1 / 2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black3);
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.nav-white {
-    grid-column: 1 / 13;
-    grid-row: 1 / 2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--bgWhite2);
-}
-
-.nav-list {
-    display: flex;
-    list-style-type: none;
-}
-
-.nav-list a {
-    text-decoration: none;
-    margin: 10px;
-}
-
-.nav-blue .nav-list a {
-    color: #fff;
-}
-
-.nav-black .nav-list a {
-    color: #fff;
-}
-
-.nav-white .nav-list a {
-    color: #000;
+nav ul li {
+  margin: 20px;
+  list-style-type: none;
 }
 
 /* MAIN */
-
 main {
-    grid-column: 3 / 13;
-    grid-row: 2 / 3;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-aside {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    background-color: var(--black3);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    color: #ccc;
-}
-
-aside ul {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-aside ul li {
-    list-style-type: none;
-    margin: 20px;
-}
-
-.valid {
-    background-color: var(--green3);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px #000;
-    margin: 10px;
-}
-
-.error {
-    background-color: var(--red3);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px #000;
-    margin: 10px;
-}
-
-.flexRow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flexCol {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    font-size: calc(64 * var(--res));
-}
-
-/* @media screen and (max-width: 1200px) {
-    h1 {
-        font-size: calc(25px + 3.3vw);
-    }
-} */
-
-/* BOUTONS */
-
-.bouton {
-    margin: 10px;
-    min-width: 200px;
-    min-height: 80px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bouton a,
-.bouton button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    text-decoration: none;
-    padding: 20px;
-    background-color: var(--black2);
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px #000;
-    border: 1px solid var(--black1);
-    font-family: Roboto;
-    font-size: 1.3em;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 0;
-    position: relative;
-}
-
-.bouton a::before {
-    content: "";
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    height: 100%;
-    background: var(--black1);
-    border-radius: 50% 50% 0 0;
-    transition: all 0.7s;
-    z-index: -1;
-}
-
-.bouton a:hover::before,
-.bouron button:hover::before {
-    top: 0;
-    border-radius: 0;
-}
-
-.bouton-bleu a, .bouton-bleu button {
-    background-color: var(--blue1);
-    border: 1px solid var(--blue2);
-}
-
-.bouton-bleu a::before {
-    background-color: var(--blue2);
-}
-
-.bouton-vert a, .bouton-vert button {
-    background-color: var(--green1);
-    border: 1px solid var(--green2);
-}
-
-.bouton-vert a::before {
-    background-color: var(--green2);
-}
-
-.bouton-rouge a, .bouton-rouge button {
-    background-color: var(--red1);
-    border: 1px solid var(--red2);
-}
-
-.bouton-rouge a::before {
-    background-color: var(--red2);
-}
-
-form {
-    width: 60%;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 4px #000;
-    background-color: #ccc;
-}
-
-form .bouton button {
-    width: 40vw;
-}
-
-.bloc-label-input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 10px;
-    width: 95%;
-}
-
-.bloc-label-input label {
-    color: #000;
-}
-
-.bloc-label-input input {
-    background-color: #ccc;
-    border: 1px solid #aaa;
-    height: 40px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-}
-
-.bloc-label-input textarea {
-    background-color: #ccc;
-    border: 1px solid #aaa;
-    height: 80px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-}
-
-@media screen and (max-width: 800px) {
-    form {
-        width: 90%;
-    }
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* FOOTER */
 footer {
-    grid-column: 1 / 13;
-    grid-row: 3 / 4;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #111;
 }
-
-.footer-black {
-    background-color: var(--black3);
-    color: #fff;
-}
-
-.footer-white {
-}
-
-footer a {
-    text-decoration: none;
-}
-
-.footer-blue a {
-    color: #fff;
-}
-
-.footer-black a {
-    color: #fff;
-}
-
-.footer-white a {
-    color: #000;
-}
+/*# sourceMappingURL=framebok.css.map */
