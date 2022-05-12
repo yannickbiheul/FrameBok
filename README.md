@@ -52,9 +52,10 @@ Le menu de navigation (nav) fait 80px de hauteur, le contenu (main) à une haute
     <div class="bouton">
         <button>Bouton</button>
     </div>
-    <div class="bouton">
+    <div class="bouton bouton-bleu">
         <a>Bouton</a>
     </div>
+3 couleurs: bouton-bleu, bouton-vert, bouton-rouge
 ## Couleurs
     color: var(--blue1);
 * --blue1
