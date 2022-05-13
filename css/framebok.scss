@@ -1,5 +1,6 @@
 /* VARIABLES ET MIXINS*/
 $noir: #2d3436;
+$noir2: #3A3845;
 $bleu: #2e86de;
 $vert: #27ae60;
 $rouge: #c0392b;
@@ -43,7 +44,7 @@ body {
 }
 
 .sombre {
-    background-color: $noir;
+    background-color: $noir2;
     color: #ccc;
 
     a {
